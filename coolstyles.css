@@ -1,0 +1,123 @@
+/*
+Home Page CSS File
+Written by Tyler Paplham
+*/
+
+*{
+    margin: 0;
+    border: 0;
+}
+
+@keyframes lines{
+    from {top: 0px;}
+    to {top: 30px;}
+}
+
+body{
+    overflow: hidden;
+    color: #00B44A;
+    background: radial-gradient(#005D35 5%, #132C1C 70%);
+    background-repeat: no-repeat;
+}
+
+
+p {
+    background-color: rgba(0, 0, 0, 0.0);
+    font-family: courier;
+    font-size: 1.75vw;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+div{
+    background-color: rgba(0,0,0,0);
+}
+
+span{
+    background-color: rgba(0,0,0,0);
+}
+
+/* Classes */
+
+.heading{
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: .5em;
+    margin-top: 0;
+    font-size: 2vw;
+}
+
+.crt{
+    height:100vh;
+    width: 100vw;
+    /*background-color: red;*/
+    
+}
+
+.bg{
+
+}
+
+
+/*TODO - make responsive */
+.line{
+    opacity: .4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(180deg,
+    rgba(0, 0, 0, 0.0),
+    rgba(107, 108, 109, .4) 5px,
+    rgba(0, 0, 0, 0.0) 5px,
+    rgba(0, 0, 0, 0.0) 15px);
+    animation: lines;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.tab{
+    margin-left: 5em;
+}
+
+.tabPlus{
+    margin-left: 10em;
+}
+
+.italics{
+    font-style: italic;
+    background-color: rgba(0,0,0,0);
+}
+
+/* IDs */
+
+#userInput{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 99%;
+
+    font-family: courier;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 1em;
+    margin-left: 1%;
+}
+
+#inputDisplay{
+    background-color: rgba(0, 0, 0, 0.0);
+    font-family: courier;
+    font-size: 16px;
+    line-height: 125%;
+    font-weight: bold;
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 0 0 1.5vw;
+    margin: 0 -3em 0 0;
+}
