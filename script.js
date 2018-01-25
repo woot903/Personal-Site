@@ -3,7 +3,7 @@ Home Page JS File
 Written by Tyler Paplham
 */
 
-var home = ["Documents", "Links", "About_This_Site.txt", "HireMe.run"];
+var home = ["Documents", "Links", "Skills.txt", "About_This_Site.txt", "HireMe.run"];
 var documents = ["About_Me.txt", "Resume.txt", "World_Domination_Plans.txt"];
 var links = ["Linkedin.html", "GitHub.html"];
 
@@ -68,6 +68,10 @@ function checkForCommands(userText){
 		case "ls":
 			ls();
 			break;
+		case "skills.txt":
+			if (currentDirectory == "Home"){
+				skills();
+			}
 		case "about_me.txt":
 			if (currentDirectory == "Documents"){
 				//open a modal or another page?
@@ -179,7 +183,7 @@ function helpCommand(){
 	"clear - clears the console output<br>"+
 	"exit - log out<br>"+
 	"-------------------------<br>"+
-	"Type a file name while in the current directory to access it (case sensitive).<br>"+
+	"Type a file name while in the current directory to access it.<br>"+
 	"-------------------------<br>";
 }
 
@@ -205,6 +209,26 @@ function welcomeMessage(){
 	"* Paplham Systems Terminal v1.2 *<br>"+
 	"*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='italics'>Now with Javascript!</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>"+
 	"*********************************<br><br>"+
-	"This terminal will provide you access to the system mainframe and it's resources.<br>"+
+	"Welcome to my terminal resume! For a more a traditional experience click <a href=''>here</a>.<br>"+
 	"Type 'help' for a list of commands or 'clear' to remove this message.<br>";
+}
+
+function skills(){
+	document.getElementById("inputDisplay").innerHTML +=
+
+	"<br><table><tbody>"+
+	"<tr><td colspan='2' class='tdHead'>Languages</td></tr>"+
+	"<tr><td>Java:</td><td>++++++++++++++++++++++</td></tr>"+
+	"<tr><td>C#:</td><td>++++++++++++++++++++++</td></tr>"+
+	"<tr><td>HTML:</td><td>++++++++++++++++++++</td></tr>"+
+	"<tr><td>CSS:</td><td>+++++++++++++++++</td></tr>"+
+	"<tr><td>SQL:</td><td>++++++</td></tr>"+
+	"<tr><td>Python:</td><td>++++++</td></tr>"+
+	"<tr><td>Php:</td><td>++++</td></tr>"+
+	"<tr><td colspan='2' class='tdHead'>Software</td></tr>"+
+	"<tr><td>Adobe CS5:</td><td>++++++++++++++++++++++</td></tr>"+
+	"<tr><td>Visio:</td><td>+++++++++++++ </td></tr>"+
+	"<tr><td>Project:</td><td>++++++</td></tr>"+
+	"<tr><td>Access:</td><td>++++</td></tr>"+
+	"</tbody></table>";
 }
