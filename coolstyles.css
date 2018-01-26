@@ -13,6 +13,7 @@ Written by Tyler Paplham
     to {top: 30px;}
 }
 
+
 body{
     overflow: hidden;
     color: #00B44A;
@@ -28,16 +29,15 @@ p {
     margin-bottom: 1.5em;
 }
 
-a{
-	color: white;
-}
 
 div{
     background-color: rgba(0,0,0,0);
     font-size: 18px;
 }
 
-
+a{
+	color: white;
+}
 
 span{
     background-color: rgba(0,0,0,0);
@@ -68,10 +68,6 @@ td{
     width: 100vw;
     /*background-color: red;*/
     
-}
-
-.bg{
-
 }
 
 
@@ -107,6 +103,35 @@ td{
 
 .tdHead{
 	text-align: center;
+}
+
+.tableStretch{
+	width: 65vw;
+}
+
+.alignRight{
+	text-align: right;
+}
+
+
+.traditionalButton a {
+	position: fixed;
+	right: 1vw;
+	top: .25vh;
+	font-family: courier;
+	font-weight: bold;
+	font-size: 12px;
+	background-color: rgba(0,0,0, 0);
+	border: 2px solid rgba(0, 180, 74, .5);
+	border-radius: 5px;
+	padding: .25em .75em .25em .75em;
+	color: rgba(0, 180, 74, .7);
+	text-decoration: none;
+}
+
+.traditionalButton a:hover{
+	color: rgba(0, 180, 74, 1);
+	border: 2px solid rgba(0, 180, 74, 1);
 }
 
 
@@ -150,5 +175,8 @@ td{
 	}
 	.heading{
 		font-size: 22px;
+	}
+	.tradtionalButton{
+		font-size: 10px;
 	}
 }

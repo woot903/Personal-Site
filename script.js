@@ -3,7 +3,7 @@ Home Page JS File
 Written by Tyler Paplham
 */
 
-var home = ["Documents", "Links", "Skills.txt", "About_This_Site.txt", "HireMe.run"];
+var home = ["Documents", "Links", "Skills.txt", "Education.txt", "About_This_Site.txt", "HireMe.run"];
 var documents = ["About_Me.txt", "Resume.txt", "World_Domination_Plans.txt"];
 var links = ["Linkedin.html", "GitHub.html"];
 
@@ -34,6 +34,9 @@ document.addEventListener("keypress", function (event){
     	if (document.getElementById("userInput").innerText.length > 2){
     		document.getElementById("userInput").innerText = document.getElementById("userInput").innerText.substr(0, document.getElementById("userInput").innerText.length - 1);
     	}
+    }
+    else if(code.length > 1){
+    	//do nothing
     }
     //if no special cases are met then put the character the user entered on the terminal line
     else{
@@ -72,6 +75,12 @@ function checkForCommands(userText){
 			if (currentDirectory == "Home"){
 				skills();
 			}
+			break;
+		case "education.txt":
+			if (currentDirectory == "Home"){
+				education();
+			}
+			break;
 		case "about_me.txt":
 			if (currentDirectory == "Documents"){
 				//open a modal or another page?
@@ -81,7 +90,7 @@ function checkForCommands(userText){
 			if (currentDirectory == "Documents"){
 				//do a thing
 			}
-      break;
+      		break;
 		case "world_domination_plans.txt":
 			if (currentDirectory == "Documents"){
 				//do a thing
@@ -231,4 +240,20 @@ function skills(){
 	"<tr><td>Project:</td><td>++++++</td></tr>"+
 	"<tr><td>Access:</td><td>++++</td></tr>"+
 	"</tbody></table>";
+}
+
+function education(){
+	document.getElementById("inputDisplay").innerHTML +=
+	"<br><table class='tableStretch'><tr><td colspan='2' class = 'tdHead'>-Arizona State University (Graduated May 2016)-</td></tr>"+
+	"<tr><td colspan='2' class = 'tdHead'>*Honors Student*</td></tr>"+	
+	"<tr><td>&nbsp;</td></tr>"+
+	"<tr><td>Computer Information Systems B.S.</td><td class='alignRight'>3.8 GPA</td></tr>"+
+	"<tr><td>Marketing B.S.</td><td class='alignRight'>Highest Honors</td></tr>"+
+	"</table><br><br><br>"+
+	"<table class='tableStretch'><tr><td colspan='2' class = 'tdHead'>-Maricopa Community Colleges (Currently Attending)-</td></tr>"+
+	"<tr><td>&nbsp;</td></tr>"+
+	"<tr><td>Computer Science</td><td class='alignRight'>4.0 GPA</td></tr>"+
+	"<tr><td>Non-Degree Seeking</td></tr>"+
+	"</table>";
+
 }
