@@ -10,7 +10,7 @@ var links = ["Linkedin.html", "GitHub.html"];
 var currentDirectory = "Home";
 
 //start listening for when the user presses a key
-document.addEventListener("keypress", function (event){
+document.addEventListener("keydown", function (event){
 	//store the key pressed
    	var code = event.key;
    	//put a space in the terminal line if its pressed
@@ -31,6 +31,8 @@ document.addEventListener("keypress", function (event){
     }
     //Backspace is pressed and the last character the user entered is removed
     else if (code == "Backspace"){
+    	console.log("Backspace was pressed!");
+    	event.preventDefault();
     	if (document.getElementById("userInput").innerText.length > 2){
     		document.getElementById("userInput").innerText = document.getElementById("userInput").innerText.substr(0, document.getElementById("userInput").innerText.length - 1);
     	}
@@ -125,7 +127,7 @@ function checkForCommands(userText){
 			}
 			break;
 	}
-	scrollUpdate();
+	//scrollUpdate();
 }
 
 function ls(){
