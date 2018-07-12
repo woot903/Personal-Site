@@ -19,6 +19,8 @@ body{
     color: #00B44A;
     background: radial-gradient(#005D35 5%, #132C1C 70%);
     background-repeat: no-repeat;
+    height:100vh;
+    width: 100vw;
 }
 
 
@@ -37,6 +39,7 @@ div{
 
 a{
 	color: white;
+	z-index: 1;
 }
 
 span{
@@ -63,12 +66,7 @@ td{
     font-size: 26px;
 }
 
-.crt{
-    height:100vh;
-    width: 100vw;
-    /*background-color: red;*/
-    
-}
+
 
 
 /*TODO - make responsive */
