@@ -4,7 +4,7 @@ Written by Tyler Paplham
 */
 
 var home = ["Documents", "Links", "Skills.txt", "Education.txt", "About_This_Site.txt", "HireMe.run"];
-var documents = ["About_Me.txt", "Resume.txt", "World_Domination_Plans.txt"];
+var documents = ["About_Me.txt", "Resume.pdf", "World_Domination_Plans.txt"];
 var links = ["Linkedin.html", "GitHub.html"];
 
 var currentDirectory = "Home";
@@ -88,7 +88,7 @@ function checkForCommands(userText){
 				//open a modal or another page?
 			}
 			break;
-		case "resume.txt":
+		case "resume.pdf":
 			if (currentDirectory == "Documents"){
 				//do a thing
 			}
@@ -149,7 +149,7 @@ function cd(dir){
 			currentDirectory = "Links";
 			displayDirecotry();
 		}
-		else if (dir === ""){
+		else if (dir === "" || dir === ".."){
 			document.getElementById("inputDisplay").innerHTML += "Error: no higher directory</br>";
 		}
 		else{
@@ -157,9 +157,12 @@ function cd(dir){
 		}
 	}
 	else {
-		if (dir === ""){
+		if (dir === "" || dir === ".."){
 			currentDirectory = "Home";
 			displayDirecotry();
+		}
+		else if (dir === "."){
+			document.getElementById("inputDisplay").innerHTML += ("Directory is currently at " + currentDirectory + ".<br>");
 		}
 		else{
 			error("cd" + dir);
