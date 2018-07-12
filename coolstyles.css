@@ -71,6 +71,7 @@ td{
 
 /*TODO - make responsive */
 .line{
+	z-index: -1;
     opacity: .4;
     position: absolute;
     width: 100%;

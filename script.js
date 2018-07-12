@@ -221,7 +221,7 @@ function welcomeMessage(){
 	"*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='italics'>Now with Javascript!</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>"+
 	"*********************************<br><br>"+
 	"Welcome to my terminal resume! For a more a traditional experience click <a href='#'>here</a>.<br>"+
-	"To view this site's code, visit my <a href='https://github.com/woot903/Personal-Site'>GitHub</a> page.<br>"+
+	"To view this site's code, visit my <a href='https://github.com/woot903/Personal-Site' target='_blank'>GitHub</a> page.<br>"+
 	"Type 'help' for a list of commands or 'clear' to remove this message.<br>";
 }
 
