@@ -90,7 +90,7 @@ function checkForCommands(userText){
 			break;
 		case "resume.pdf":
 			if (currentDirectory == "Documents"){
-				window.open("./resume.txt");
+				document.getElementById("resume").click();
 			}
       		break;
 		case "world_domination_plans.txt":
