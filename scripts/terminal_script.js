@@ -194,7 +194,6 @@ function helpCommand(){
 	"mkdir - create a new directory<br>"+
 	"rmdir - remove a directory<br />"+
 	"clear - clears the console output<br>"+
-	"exit - log out<br>"+
 	"-------------------------<br>"+
 	"Type a file name while in the current directory to access it.<br>"+
 	"-------------------------<br>";
